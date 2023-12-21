@@ -31,7 +31,9 @@ h1 {
 }
 
 input[type=text] {
-    position: absolute;
+    position: fixed;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
     width: 500px;
     height: 50px;
     font-size: 1.2em;
@@ -41,7 +43,9 @@ input[type=text] {
   }
 
 button{
-    position: absolute;
+    position: fixed;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
     width: 150px;
     height: inherit;
     font-size: 1.2em;
