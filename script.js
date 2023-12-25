@@ -5,8 +5,8 @@ const questionLanding = document.querySelector(".question");
 
 var question = null;
 var gifMain = null;
-var yesBtn = null;
-var noBtn = null;
+var yesButton = null;
+var noButton = null;
 var input = null;
 
 
@@ -30,11 +30,11 @@ startButton.addEventListener("click", () => {
 
         questionMain = document.querySelector(".question");
         gifMain = document.querySelector(".gif");
-        yesBtn = document.querySelector(".yes-btn");
-        noBtn = document.querySelector(".no-btn");
+        yesButton = document.querySelector(".yes-btn");
+        noButton = document.querySelector(".no-btn");
 
-        yesBtn.addEventListener("click", yesButtonListener);
-        noBtn.addEventListener("click", noButtonListener);
+        yesButton.addEventListener("click", yesButtonListener);
+        noButton.addEventListener("click", noButtonListener);
     }
 });
 
@@ -47,13 +47,13 @@ function yesButtonListener(){
 function noButtonListener(){
     gifMain.src ="https://media.giphy.com/media/hbOgjMOUfLdWV2Ty1j/giphy.gif";
     questionMain.innerHTML = "You don't love me?";
-    const noBtnRect = noBtn.getBoundingClientRect();
-    const maxX = window.innerWidth - noBtnRect.width;
-    const maxY = window.innerHeight - noBtnRect.height;
+    const noButtonRect = noButton.getBoundingClientRect();
+    const maxX = window.innerWidth - noButtonRect.width;
+    const maxY = window.innerHeight - noButtonRect.height;
 
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
-    noBtn.style.left = randomX + "px";
-    noBtn.style.top = randomY + "px";
+    noButton.style.left = randomX + "px";
+    noButton.style.top = randomY + "px";
 }
