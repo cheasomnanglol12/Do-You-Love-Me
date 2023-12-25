@@ -7,7 +7,7 @@ startButton.addEventListener("click", () => {
     let input = document.getElementById("fname").value;
 
     if (input== ""){
-        gif.src = "https://media.giphy.com/media/oUZhU3R4jwL3uVeTyb/giphy.gif";
+        gif.src = "https://media.giphy.com/media/VB3cK9oA48BbQWcObd/giphy.gif";
         question.innerHTML = "Please give  me your name before you start!"
     }
     else{
