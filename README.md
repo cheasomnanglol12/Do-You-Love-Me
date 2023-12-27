@@ -1,8 +1,8 @@
-#DO YOU LOVE ME?
+# DO YOU LOVE ME?
 
 Hello! This is a a project I created just for fun. This project is not so perfect since Iam learning more about HTML, CSS, and JavaScript, so I would appreciate it if you give me some feedbacks! Have fun!;)
 
-##HOW TO USE IT
+## HOW TO USE IT
 
 1. You can clone or download this project and open the .html file with your browser
 2. Enter your name in the input box and then click the button
