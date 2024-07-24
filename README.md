@@ -9,4 +9,3 @@ Hello! This is a a project I created just for fun. This project is not perfect s
 3. The page will change and you will see a question with the options "Yes" and "No"
 4. You can click the "No" option to see something unique happens but it is okay to click "Yes" too ;)
 
-Note: The documentation of the code and the log file will be add later
