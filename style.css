@@ -60,33 +60,31 @@ button:hover {
 /* Container for the image train */
 .image-train-container {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 15px;
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    gap: 10px;
     margin-top: 30px;
-    padding: 20px;
-    overflow: hidden; /* Prevent overflow */
+    animation: moveTrain 4s linear infinite; /* Speed up the movement */
+    overflow: hidden;
     position: relative;
-    animation: moveTrain 20s linear infinite;
 }
 
 /* Styling each individual image in the "train" */
 .image-train-container img {
-    width: 120px; /* Size of the image */
-    height: 120px;
+    width: 100px; /* Set width for better control */
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: bounce 1s ease-in-out infinite alternate; /* Bounce effect */
 }
 
-/* Animation for images to move across like a train */
+/* Animation for images to move like a train at a fast speed */
 @keyframes moveTrain {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* Faster movement */
     }
 }
 
@@ -96,7 +94,7 @@ button:hover {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
     100% {
         transform: translateY(0);
@@ -124,34 +122,4 @@ button:nth-child(2) {
         opacity: 1;
     }
     100% {
-        transform: scale(1);
-        opacity: 0.7;
-    }
-}
-
-.heart {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: #ff1493;
-    animation: heartPulse 1.5s infinite;
-}
-
-/* Button animation when "No" is clicked */
-@keyframes moveNoButton {
-    0% {
-        left: 50%;
-        top: 50%;
-    }
-    100% {
-        left: random();
-        top: random();
-    }
-}
-
-.no-btn {
-    position: relative;
-    animation: moveNoButton 1s ease-in-out infinite;
-}
+        transform: sca
