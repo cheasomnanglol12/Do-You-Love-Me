@@ -16,7 +16,7 @@ function createVirus() {
     // Explode into particles after animation
     setTimeout(() => {
         explodeVirus(virus);
-    }, 2000); // Matches the animation duration
+    }, 1000); // Matches the animation duration
 }
 
 // Function to explode the virus into particles
@@ -42,10 +42,10 @@ function explodeVirus(virus) {
 // Create multiple viruses
 function startVirusAttack() {
     setInterval(() => {
-        for (let i = 0; i < 10; i++) { // Create 10 viruses at a time
+        for (let i = 0; i < 20; i++) { // Create 20 viruses at a time
             createVirus();
         }
-    }, 500); // Adjust interval for more/less chaos
+    }, 200); // Adjust interval for more/less chaos
 }
 
 // Start the virus attack
