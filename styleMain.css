@@ -54,3 +54,57 @@ button:nth-child(2) {
     background: white;
     color: #e94d58;
 }
+
+/* Wrapper to hold the images and make sure it's positioned well */
+.wrapper {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Question text style */
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Styles for the gif image with a fade effect */
+.gif {
+    width: 100%;
+    max-width: 500px; /* Set a max width to avoid stretching */
+    animation: fade-in-out 2s infinite;
+}
+
+/* Fade-in-out animation */
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Button group styles */
+.btn-group {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
