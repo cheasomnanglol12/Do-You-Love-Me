@@ -1,4 +1,4 @@
-// Array of image sources (use the provided image URL)
+// Array of image sources (using the same image URL as requested)
 const imageSources = [
     'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
     'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
@@ -62,4 +62,15 @@ noButton.addEventListener('click', () => {
     }
 
     questionText.style.color = '#ff4500'; // Change the question color
+
+    // Make the "No" button move randomly
+    const noButtonRect = noButton.getBoundingClientRect();
+    const maxX = window.innerWidth - noButtonRect.width;
+    const maxY = window.innerHeight - noButtonRect.height;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    noButton.style.left = randomX + 'px';
+    noButton.style.top = randomY + 'px';
 });
