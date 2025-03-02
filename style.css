@@ -59,20 +59,21 @@ button:hover {
 
 /* Container for the image train */
 .image-train-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
     gap: 15px;
     margin-top: 30px;
     padding: 20px;
-    overflow: hidden;
+    overflow: hidden; /* Prevent overflow */
     position: relative;
     animation: moveTrain 20s linear infinite;
 }
 
 /* Styling each individual image in the "train" */
 .image-train-container img {
-    width: 100%;
-    height: 100px;
+    width: 120px; /* Size of the image */
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -151,6 +152,6 @@ button:nth-child(2) {
 }
 
 .no-btn {
-    position: absolute;
+    position: relative;
     animation: moveNoButton 1s ease-in-out infinite;
 }
