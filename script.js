@@ -13,19 +13,39 @@ function createVirus() {
     // Append to body
     document.body.appendChild(virus);
 
-    // Remove the virus after the explosion animation
+    // Explode into particles after animation
     setTimeout(() => {
-        virus.remove();
-    }, 2500); // Matches the animation duration
+        explodeVirus(virus);
+    }, 2000); // Matches the animation duration
+}
+
+// Function to explode the virus into particles
+function explodeVirus(virus) {
+    const particles = 20; // Number of particles
+    for (let i = 0; i < particles; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('virus-particle');
+        particle.style.left = virus.offsetLeft + 'px';
+        particle.style.top = virus.offsetTop + 'px';
+        document.body.appendChild(particle);
+
+        // Remove particle after animation
+        setTimeout(() => {
+            particle.remove();
+        }, 1000);
+    }
+
+    // Remove the virus
+    virus.remove();
 }
 
 // Create multiple viruses
 function startVirusAttack() {
     setInterval(() => {
-        for (let i = 0; i < 5; i++) { // Create 5 viruses at a time
+        for (let i = 0; i < 10; i++) { // Create 10 viruses at a time
             createVirus();
         }
-    }, 1000); // Adjust interval for more/less chaos
+    }, 500); // Adjust interval for more/less chaos
 }
 
 // Start the virus attack
