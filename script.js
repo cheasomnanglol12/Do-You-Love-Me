@@ -25,9 +25,11 @@ startButton.addEventListener("click", () => {
         "<link rel='stylesheet' href='styleMain.css'/>"
 
         document.body.innerHTML = "<div class='wrapper'><h2 class='question'>Hello "+input+ "! Will you go out with me?</h2>"+
-        "<img class='gif' alt='gif' src='https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg'/>"+
-        "<div class='btn-group'><button class='yes-btn'>Yes</button>"+
-        "<button class='no-btn'>No</button></div></div>"
+       "<img class='gif' alt='gif' src='https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg'/>"+
+       "<div class='btn-group'><button class='yes-btn'>Yes</button>"+
+       "<button class='no-btn'>No</button></div></div>"
+
+        
 
         questionMain = document.querySelector(".question");
         gifMain = document.querySelector(".gif");
