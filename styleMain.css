@@ -1,10 +1,11 @@
-*
-{
+/* Resetting the margins and padding for consistency */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body setup */
 body {
     display: flex;
     justify-content: center;
@@ -12,81 +13,21 @@ body {
     min-height: 100vh;
     background: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
 }
 
-.gif {
-    height: 100%;
-    width: 100%;
-}
-
-h2 {
-    text-align: center;
-    font-size: 1.5em;
-    color: #e94d58;
-    margin: 15px 0;
-}
-.btn-group {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-button {
-    position: absolute;
-    width: 150px;
-    height: inherit;
-    color: white;
-    font-size: 1.2em;
-    border-radius: 30px;
-    outline: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px gray;
-    border: 2px solid #e94d58;
-    font-size: 1.2em;
-}
-button:nth-child(1) {
-    margin-left: -200px;
-    background: #e94d58;
-}
-button:nth-child(2) {
-    margin-right: -200px;
-    background: white;
-    color: #e94d58;
-}
-
-/* Wrapper to hold the images and make sure it's positioned well */
+/* Wrapper to hold content */
 .wrapper {
     position: relative;
     text-align: center;
-    margin-top: 20px;
 }
 
 /* Question text style */
 .question {
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
-}
-
-/* Styles for the gif image with a fade effect */
-.gif {
-    width: 100%;
-    max-width: 500px; /* Set a max width to avoid stretching */
-    animation: fade-in-out 2s infinite;
-}
-
-/* Fade-in-out animation */
-@keyframes fade-in-out {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+    color: #e94d58;
+    margin-top: 20px;
 }
 
 /* Button group styles */
@@ -103,8 +44,54 @@ button {
     background-color: #ff69b4;
     color: white;
     transition: background-color 0.3s;
+    margin: 10px;
 }
 
 button:hover {
     background-color: #ff1493;
+}
+
+/* Container for the image train */
+.image-train-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    animation: moveTrain 15s linear infinite;
+}
+
+/* Styling each individual image */
+.image-train-container img {
+    width: 100px; /* Small size of the image */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for images */
+.image-train-container img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Animation for the image train to create a loop effect */
+@keyframes moveTrain {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* The "yes" and "no" buttons */
+button:nth-child(1) {
+    background-color: #e94d58;
+}
+
+button:nth-child(2) {
+    background-color: white;
+    color: #e94d58;
 }
