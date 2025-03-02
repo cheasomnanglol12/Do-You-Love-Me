@@ -1,7 +1,7 @@
-// Function to create a new virus image
+// Function to create a virus image
 function createVirus() {
     const virus = document.createElement('img');
-    virus.src = 'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg';
+    virus.src = 'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg'; // Your image link
     virus.classList.add('virus-image');
 
     // Random position
@@ -13,15 +13,23 @@ function createVirus() {
     // Append to body
     document.body.appendChild(virus);
 
-    // Make the virus multiply after a delay
+    // Remove the virus after the explosion animation
     setTimeout(() => {
-        createVirus(); // Create another virus
-        createVirus(); // Create another virus
-    }, 1000); // Adjust delay for more/less chaos
+        virus.remove();
+    }, 2500); // Matches the animation duration
 }
 
-// Start the virus effect
-createVirus();
+// Create multiple viruses
+function startVirusAttack() {
+    setInterval(() => {
+        for (let i = 0; i < 5; i++) { // Create 5 viruses at a time
+            createVirus();
+        }
+    }, 1000); // Adjust interval for more/less chaos
+}
+
+// Start the virus attack
+startVirusAttack();
 
 // Button actions
 document.getElementById('yesButton').addEventListener('click', function() {
