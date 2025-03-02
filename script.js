@@ -115,6 +115,7 @@ const imageSources = [
     
 ];
 
+
 // Select the container where the images will be added
 const imageContainer = document.querySelector('.image-train-container');
 
