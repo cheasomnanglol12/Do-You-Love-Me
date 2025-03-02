@@ -1,31 +1,46 @@
+/* Background with an online image */
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #000;
-    font-family: Arial, sans-serif;
+    background-image: url('https://i.postimg.cc/8z7WzZ7N/background.jpg'); /* Replace with your background link */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Popup container */
 .popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .buttons {
-    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
 }
 
 button {
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 10px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
-    z-index: 1000;
+    font-size: 1.2rem;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 #yesButton {
@@ -33,29 +48,21 @@ button {
     color: white;
 }
 
+#yesButton:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
 #noButton {
     background-color: #f44336;
     color: white;
 }
 
+#noButton:hover {
+    background-color: #e53935;
+    transform: scale(1.1);
+}
+
+/* Virus image styling */
 .virus-image {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    animation: pulse 1s infinite, move 5s infinite linear;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-
-@keyframes move {
-    0% { top: 0; left: 0; }
-    25% { top: 0; left: 100%; }
-    50% { top: 100%; left: 100%; }
-    75% { top: 100%; left: 0; }
-    100% { top: 0; left: 0; }
-}
+    position
