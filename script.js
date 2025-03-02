@@ -1,13 +1,12 @@
-// Array of image sources (use your own URLs or paths)
+// Array of image sources (use the provided image URL)
 const imageSources = [
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100'
+    'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
+    'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
+    'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
+    'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
+    'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
+    'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg',
+    'https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg'
 ];
 
 // Select the container where the images will be added
@@ -19,7 +18,7 @@ function loadImages() {
         imageSources.forEach(src => {
             const img = document.createElement('img');
             img.src = src;
-            img.alt = 'Image Train';
+            img.alt = 'Cute Image';
             imageContainer.appendChild(img);
         });
     }
@@ -38,6 +37,16 @@ yesButton.addEventListener('click', () => {
     questionText.innerHTML = "Yay! Thank you for loving me ❤️!";
     questionText.style.color = '#ff1493'; // Change the question color
     loadImages(); // Reload images to keep the train going
+
+    // Show a cute heart animation
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️';
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove(); // Remove heart after animation
+    }, 1500);
 });
 
 // Event listener for the "No" button
