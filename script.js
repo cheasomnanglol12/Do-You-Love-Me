@@ -8,11 +8,15 @@ var yesButton = null;
 var noButton = null;
 var input = null;
 var count = 0;
+
+// More images added to the loop
 var images = [
     "https://i.postimg.cc/wB1wTMkP/IMG-20250302-232704-736.jpg", // First image
     "https://i.postimg.cc/9XH8tR7V/IMG-20250302-232705-737.jpg", // Second image
     "https://i.postimg.cc/hjFcXxP7/IMG-20250302-232706-738.jpg", // Third image
-    "https://i.postimg.cc/t4JxN6sd/IMG-20250302-232707-739.jpg"  // Fourth image
+    "https://i.postimg.cc/t4JxN6sd/IMG-20250302-232707-739.jpg", // Fourth image
+    "https://i.postimg.cc/K8Hk5B9z/IMG-20250302-232708-740.jpg", // Fifth image
+    "https://i.postimg.cc/2yYd2Hqg/IMG-20250302-232709-741.jpg"  // Sixth image
 ];
 
 startButton.addEventListener("click", () => {
@@ -61,10 +65,11 @@ function yesButtonListener() {
 }
 
 function noButtonListener() {
-    // Loop through images and display one based on the count
-    const imageIndex = count % images.length;  // Loop through the images array
+    // Loop through images more frequently and update the image index with modulo
+    const imageIndex = count % images.length;  // Ensure it loops through all images
     gifMain.src = images[imageIndex];
-    
+
+    // Show different messages based on the number of clicks
     if (count < 5) {
         questionMain.innerHTML = "You don't love me?";
     } else if (count >= 5 && count < 10) {
