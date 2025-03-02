@@ -121,7 +121,7 @@ const imageContainer = document.querySelector('.image-train-container');
 
 // Function to load images into the container
 function loadImages() {
-    for (let i = 0; i < 20; i++) {  // Repeat images to make the "train" long
+    for (let i = 0; i < 30; i++) {  // Repeat images to make the "train" long
         imageSources.forEach(src => {
             const img = document.createElement('img');
             img.src = src;
